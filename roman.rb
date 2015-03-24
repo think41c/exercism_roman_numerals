@@ -1,8 +1,15 @@
 class Fixnum
   
   def to_roman
-    
-    # divide self by 1000. The whole number is how many times M is printed. 
+
+    # Counts up by 3 of the smaller numeral, and then precedes one numeral by the larger numeral.
+    # VIII = 8 
+    # IX   = 9 
+    # X    = 10 
+
+    # XCVIII = 98 
+    # XCIX   = 99
+    # XC     = 90, IX = 9 
 
     self > 1000 
     m_num = self / 1000 
@@ -27,10 +34,18 @@ class Fixnum
 
     v_num = remainder / 5 
     remainder = remainder - (v_num * 5)
-    v = "V"*v_num
+    
     
     i_num = remainder / 1
     remainder = remainder - (i_num * 1)
+    if i_num == 4 then 
+      # p i_num
+      i_num = 1
+      # p v_num
+      v_num = v_num + 1 
+    end
+
+    v = "V"*v_num
     i = "I"*i_num
 
     "#{m}#{d}#{c}#{l}#{x}#{v}#{i}"
@@ -42,11 +57,9 @@ class Fixnum
     # D,500
     # M,1000
   end
-
 end
 
 
 
-# 23.to_roman
+p 4.to_roman
 
-# p "H"*3
