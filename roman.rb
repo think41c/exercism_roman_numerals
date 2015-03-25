@@ -11,6 +11,11 @@ class Fixnum
     # XCIX   = 99
     # XC     = 90, IX = 9 
 
+
+    # 890 - DCCCXC   
+    # DCCC = 800 , XC = 90
+
+
     self > 1000 
     m_num = self / 1000 
     remainder = self - (m_num * 1000)
@@ -50,16 +55,27 @@ class Fixnum
 
     "#{m}#{d}#{c}#{l}#{x}#{v}#{i}"
 
-    # V,5
-    # X,10
-    # L,50
-    # C,100
-    # D,500
-    # M,1000
+    # *V,5
+    # *X,10
+    # *L,50
+    # *C,100
+    # *D,500
+    # *M,1000
   end
 end
 
+#  1 5   8   7 
+#  M D LXXX VII
 
+#   8    9    2 
+# DCCC  XC    II 
 
-p 4.to_roman
+#   2    3    4
+#  CC   XXX   IV 
 
+#   9    8    9 
+#  CM   LXXX  IX
+
+# Think about the placement of the digit and compute each number separately. 
+
+p 14.to_roman
