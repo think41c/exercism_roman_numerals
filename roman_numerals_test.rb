@@ -16,12 +16,10 @@ class RomanTest < Minitest::Test
   end
 
   def test_4
-    skip
     assert_equal 'IV', 4.to_roman
   end
 
   def test_5
-    skip
     assert_equal 'V', 5.to_roman
   end
 
