@@ -2,6 +2,7 @@ class Fixnum
 
   def to_roman
     answer = []
+    num_length = self.to_s.length
     num_string = self.to_s
 
       case num_string[-4]
