@@ -72,8 +72,8 @@ class Fixnum
 
       case num_string[-2]
       when "1" then answer << "X"
-      when "2" then answer << "XII"
-      when "3" then answer << "XIII"
+      when "2" then answer << "XX"
+      when "3" then answer << "XXXX"
       when "4" then answer << "XL"
       when "5" then answer << "L"
       when "6" then answer << "LX"
